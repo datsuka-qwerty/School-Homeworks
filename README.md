@@ -2,7 +2,7 @@
 
 Folder format
 -------------------
-* issue <-in progress homeworks
+* assignments<-in progress homeworks
 * done  <-done homeworks
 
 # Do you want to add another user to this repository?
