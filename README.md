@@ -5,8 +5,9 @@ Folder format
 * assignments<-in progress homeworks
 * done  <-done homeworks
 
-# If you find issue in this repository.
+# Welcome fork and pull request :-)
 
+You found issues in my repository.....?  
 __Please tell me where issue raw is.__ I can study programing for your report. :-)  
 
 # Do you want to add another user to this repository?
