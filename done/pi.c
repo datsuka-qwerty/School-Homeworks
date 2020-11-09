@@ -11,7 +11,7 @@ double intgr_rect(double n) // find the area of a quarter of a circle by rectang
 		area += ((1.0/n)*(sqrt(1.0-(x*x))));
 	}
 
-	return 4*area;
+	return 4.0*area;
 }
 
 double intgr_trape(double n) // find the area of a quarter of a circle by trapezoid
@@ -26,7 +26,7 @@ double intgr_trape(double n) // find the area of a quarter of a circle by trapez
 
 		area += ((1.0/n) * (y1+y2) * (1.0/2.0));
 	}
-	return 4*area;
+	return 4.0*area;
 }
 
 
