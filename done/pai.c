@@ -1,4 +1,4 @@
-#define _USE_MATH_DEFINES
+#define _USE_MATH_DEFINES // if include "math.h" need this line
 #include <math.h>
 #include <stdio.h>
 
