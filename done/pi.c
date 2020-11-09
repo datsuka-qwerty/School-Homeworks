@@ -19,7 +19,7 @@ double intgr_trape(double n) // find the area of a quarter of a circle by trapez
 	double area = 0;
 	for (int i = 1; i < n+1; i++)
 	{
-		double y1, y2 = 0; // reset left point y1, right is y2
+		double y1, y2 = 0; // reset left point y1, right y2
 		double x = (i/n); // reset x coordinate
 		y1 = sqrt(1.0-((x-(1.0/n))*(x-(1.0/n)))); // find left point y1
 		y2 = sqrt(1.0-(x*x)); // find right point y2
@@ -29,9 +29,10 @@ double intgr_trape(double n) // find the area of a quarter of a circle by trapez
 	return 4*area;
 }
 
+
 int main(void)
 {
-	double n = 0; // divisions
+	double n = 0; // for divisions
 	double pai_rect, pai_trape = 0; // pai_rectangle, pai_trapezoid
 	printf("分割回数を入力してください。\n->");	scanf("%lf", &n);
 
