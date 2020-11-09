@@ -25,7 +25,6 @@ double intgr_trape(double n) // find the area of a quarter of a circle by trapez
 
 		area += ((1.0/n) * (y1+y2) * (1.0/2.0));
 	}
-	printf("aaaa%lf\n", area);
 	return 4*area;
 }
 
