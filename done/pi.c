@@ -2,7 +2,27 @@
 #include <math.h>
 #include <stdio.h>
 
-double intgr_rect(double n) // find the area of a quarter of a circle by rectangle
+double intgr_rect(double); // find the area of a quarter of a circle by rectangle
+double intgr_trape(double); // find the area of a quarter of a circle by trapezoid
+
+
+int main(void)
+{
+	double n = 0; // for divisions
+	double pi_rect, pi_trape = 0; // pai_rectangle, pai_trapezoid
+	printf("分割回数を入力してください。\n->");	scanf("%lf", &n);
+
+	pi_rect = intgr_rect(n);
+	pi_trape = intgr_trape(n);
+
+
+	printf("結果は\n短形：%lf 誤差：%lf\n台形：%lf 誤差：%lf\n", pi_rect, (pi_rect-M_PI), pi_trape, (pi_trape-M_PI));
+	printf("数学関数で定義されているπ：%lf\n", M_PI);
+	return 0;
+}
+
+
+double intgr_rect(double n) // find the area of a quarter of a circle by "rectangle"
 {
 	double area = 0;
 	for(int i = 1; i < n+1; i++)
@@ -14,7 +34,7 @@ double intgr_rect(double n) // find the area of a quarter of a circle by rectang
 	return 4.0*area;
 }
 
-double intgr_trape(double n) // find the area of a quarter of a circle by trapezoid
+double intgr_trape(double n) // find the area of a quarter of a circle by "trapezoid"
 {
 	double area = 0;
 	for (int i = 1; i < n+1; i++)
@@ -27,20 +47,4 @@ double intgr_trape(double n) // find the area of a quarter of a circle by trapez
 		area += ((1.0/n) * (y1+y2) * (1.0/2.0));
 	}
 	return 4.0*area;
-}
-
-
-int main(void)
-{
-	double n = 0; // for divisions
-	double pai_rect, pai_trape = 0; // pai_rectangle, pai_trapezoid
-	printf("分割回数を入力してください。\n->");	scanf("%lf", &n);
-
-	pai_rect = intgr_rect(n);
-	pai_trape = intgr_trape(n);
-
-
-	printf("結果は\n短形：%lf 誤差：%lf\n台形：%lf 誤差：%lf\n", pai_rect, (pai_rect-M_PI), pai_trape, (pai_trape-M_PI));
-	printf("数学関数で定義されているπ：%lf\n", M_PI);
-	return 0;
 }
