@@ -39,6 +39,7 @@ int main(void)
 	pai_trape = intgr_trape(n);
 
 
-	printf("結果は\n短形：%lf 誤差：%lf\n台形：%lf 誤差：%lf\nです。", pai_rect, (pai_rect-M_PI), pai_trape, (pai_trape-M_PI));
+	printf("結果は\n短形：%lf 誤差：%lf\n台形：%lf 誤差：%lf\n", pai_rect, (pai_rect-M_PI), pai_trape, (pai_trape-M_PI));
+	printf("数学関数で定義されているπ：%lf\n", M_PI);
 	return 0;
 }
