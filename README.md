@@ -1,9 +1,9 @@
-# This is my programming class homeworks repository.
+# This is my programming class homework repository.
 
 Folder format
 -------------------
-* assignments<-in progress homeworks
-* done  <-done homeworks
+* assignments<-in progress homework
+* done  <-done homework
 
 # Welcome fork and pull request :-)
 
