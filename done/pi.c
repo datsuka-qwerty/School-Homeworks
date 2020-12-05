@@ -15,7 +15,6 @@ int main(void)
 	pi_rect = intgr_rect(n);
 	pi_trape = intgr_trape(n);
 
-
 	printf("結果は\n短形：%lf 誤差：%lf\n台形：%lf 誤差：%lf\n", pi_rect, (pi_rect-M_PI), pi_trape, (pi_trape-M_PI));
 	printf("数学関数で定義されているπ：%lf\n", M_PI);
 	return 0;
