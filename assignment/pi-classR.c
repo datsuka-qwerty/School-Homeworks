@@ -4,6 +4,7 @@
 #define _USE_MATH_DEFINES // if include "math.h" need this line
 #include <math.h>
 #include <stdio.h>
+#include <stdlib.h>  // use system PAUSE
 
 double intgr_rect(double); // find the area of a quarter of a circle by rectangle
 double intgr_trape(double); // find the area of a quarter of a circle by trapezoid
