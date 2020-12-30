@@ -30,7 +30,8 @@ int main(void)
 		}
 		fprintf(fp, "divisions,rectangle,divisions,trapezoid\n");
 		fclose(fp);
-		printf("Successfully reset!\nSuccess writing divisions, rectangle, divisions, trapezoid\n");
+		printf("Successfully reset!\n");
+		printf("Success writing divisions, rectangle, divisions, trapezoid\n");
 	}
 
 
