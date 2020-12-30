@@ -25,7 +25,8 @@ int main(void)
 		fp = fopen("result.csv", "w"); // clear and reset result.csv file
 		if (fp == NULL)
 		{
-			printf("Error!!\n");
+			printf("Unable file open!!\n");
+			system("PAUSE");
 			return 1;
 		}
 		fprintf(fp, "divisions,rectangle,divisions,trapezoid\n");
