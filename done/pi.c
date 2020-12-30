@@ -40,8 +40,8 @@ double intgr_trape(double n) // find the area of a quarter of a circle by "trape
 	{
 		double y1, y2 = 0; // reset left point y1, right y2
 		double x = (i/n); // reset x coordinate
-		y1 = sqrt(1.0-((x-(1.0/n))*(x-(1.0/n)))); // find left point y1
-		y2 = sqrt(1.0-(x*x)); // find right point y2
+		y1 = sqrt(1.0 - ( (x-(1.0/n)) * (x-(1.0/n)) )); // find left point y1
+		y2 = sqrt(1.0 - (x*x)); // find right point y2
 
 		area += ((1.0/n) * (y1+y2) * (1.0/2.0));
 	}
