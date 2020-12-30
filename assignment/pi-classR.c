@@ -1,3 +1,6 @@
+/*
+	Before run this program, make result.csv file current directory
+*/
 #define _USE_MATH_DEFINES // if include "math.h" need this line
 #include <math.h>
 #include <stdio.h>
@@ -8,18 +11,29 @@ double intgr_trape(double); // find the area of a quarter of a circle by trapezo
 
 int main(void)
 {
-	FILE* output; // file pointer name
-	double n = 0; // for divisions
+	FILE* fp; // file pointer name
 	double pi_rect, pi_trape = 0; // pai_rectangle, pai_trapezoid
 
-	for (int j = 0; j < 100; j++)
+	fp = fopen("result.csv", "a");
+
+	if (fp != NULL) // successfully file open in mode a
 	{
-		pi_rect = intgr_rect(n);
-		pi_trape = intgr_trape(n);
+		for (int j = 1; j < 101; j++) // write to file
+		{
+			pi_rect = intgr_rect(j);
+			pi_trape = intgr_trape(j);
+			fprintf(fp, "%d,%.15f,%d,%.15f\n", j, pi_rect, j, pi_trape);
+			printf("%d time(s), %.15f, %.15f\n", j, pi_rect, pi_trape);
+		}
+	}
+	else // unsuccessfully file open
+	{
+		printf("Unable file open!!");
+		system("PAUSE"); // Press any key to continue . . .
+		return 1;
 	}
 
-	pi_rect = intgr_rect(n);
-	pi_trape = intgr_trape(n);
+	fclose(fp);
 
 	return 0;
 }
