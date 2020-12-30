@@ -1,7 +1,3 @@
-/*
-	Before run this program, make result.csv file current directory
-	write format [division, intgr_rect, division, intgr_trape]
-*/
 #define _USE_MATH_DEFINES // if include "math.h" need this line
 #include <math.h>
 #include <stdio.h>
