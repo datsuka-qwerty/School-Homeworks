@@ -1,6 +1,7 @@
 #ifndef M_PI
 #define M_PI 3.14159265358979323846
 #endif
+#include <math.h>
 #include <stdio.h>
 
 double intgr_rect(double); // find the area of a quarter of a circle by rectangle
