@@ -1,5 +1,6 @@
-#define _USE_MATH_DEFINES // if include "math.h" need this line
-#include <math.h>
+#ifndef M_PI
+#define M_PI 3.14159265358979323846
+#endif
 #include <stdio.h>
 
 double intgr_rect(double); // find the area of a quarter of a circle by rectangle
