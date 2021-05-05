@@ -1,4 +1,6 @@
 #define _USE_MATH_DEFINES // if include "math.h" need this line
+#define SYSPAUSE system("pause>nul|set/p =Press ENTER to continue..."); // <-Windows User
+// #define SYSPAUSE system("echo Press ENTER to continue...; read dummy;"); // <-Linux or MacOS User
 #include <math.h>
 #include <stdio.h>
 #include <stdlib.h>  // use system()
@@ -22,23 +24,22 @@ int main(void)
 		if (fp == NULL)
 		{
 			printf("Unable file open!!\n");
-			system("PAUSE");
-			return 1;
+			SYSPAUSE;
 		}
+		printf("Successfully reset!\n");
 		fprintf(fp, "divisions,rectangle,divisions,trapezoid\n");
 		fclose(fp);
-		printf("Successfully reset!\n");
-		printf("Success writing divisions, rectangle, divisions, trapezoid\n\n");
+		printf("Success writing divisions, rectangle, divisions, trapezoid.\n\n");
 	}
 
 
 /* calculate and write*/
-	printf("Check out result.csv file\n");
-	system("pause>nul|set/p =Ready?");
+	printf("Check out result.csv file. Ready writing to file?\n");
+	SYSPAUSE;
 
 	fp = fopen("result.csv", "a");
 
-	if (fp != NULL) // successfully file open in mode a
+	if (fp != NULL) // if successfully open file in mode a
 	{
 		for (int j = 1; j < 101; j++) // write to file
 		{
@@ -48,11 +49,11 @@ int main(void)
 			printf("%d time(s), %.15f, %.15f\n", j, pi_rect, pi_trape);
 		}
 	}
-	else // unsuccessfully file open
+	else // unsuccessfully open file
 	{
 		printf("Unable file open!!\n");
-		system("PAUSE"); // Press any key to continue . . .
-		return 1;
+		SYSPAUSE;
+		return -1;
 	}
 
 	fclose(fp);
