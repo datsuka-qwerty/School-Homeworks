@@ -14,7 +14,7 @@ int main(void)
 	int in_year, in_month = 0; // variables for input year and month
 	int leap_year = 0; // count leap years
 
-	printf("Enter year in A.D.\n->");	scanf("%d", &in_year); // data input
+	printf("Enter year in CE\n->");	scanf("%d", &in_year); // data input
 	printf("\nEnter month \n->");	scanf("%d", &in_month);
 
 	for (int i = 1; i <= in_year-1; i++) // count leap years until in_year
